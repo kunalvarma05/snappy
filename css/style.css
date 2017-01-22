@@ -62,3 +62,74 @@ button {
     border-right: solid 1px rgba(255, 255, 255, 0.5);
     margin-right: 10px;
 }
+
+
+/*
+ * Chat Area
+ */
+
+.chat-header {
+    background: #141a2e;
+    color: #fff;
+    text-align: center;
+}
+
+.chat-header a {
+    color: #d9deea;
+    display: inline-block;
+    padding: 10px;
+}
+
+.chat-header .toggle-channels {
+    float: left;
+    padding: 10px 15px;
+}
+
+.chat-header .logo {
+    font-size: 16px;
+}
+
+.chat-header .account-tab {
+    float: right;
+    position: relative;
+}
+
+.chat-header .account-tab img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chat-header .toggle-account-dropdown span {
+    position: relative;
+    display: inline;
+    top: -5px;
+    left: 5px;
+    color: #d9deea;
+}
+
+.chat-header .account-tab:hover .account-dropdown {
+    display: block;
+}
+
+.chat-header .account-dropdown {
+    position: absolute;
+    top: 92%;
+    right: 20%;
+    min-width: 150px;
+    background: #fff;
+    border: solid 1px #ddd;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.chat-header .account-dropdown a {
+    display: block;
+    text-align: left;
+    color: #555;
+    border-bottom: solid 1px #ddd;
+}
+
+.chat-header .account-dropdown a:hover {
+    background: #fafafa;
+}
