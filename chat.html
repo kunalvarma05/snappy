@@ -27,6 +27,32 @@
                 </div>
             </div>
         </div>
+        <div class="chat-container">
+            <div class="channel-area">
+                <a class="toggle-channel-form">
+                    <span class="fa fa-plus"></span>
+                    Create Channel
+                </a>
+                <div class="channel-form">
+                    <input type="text" placeholder="Channel name" id="channel-name">
+                    <input type="text" placeholder="Password (optional)" id="channel-password">
+                    <input type="color" id="channel-color" value="#00ffff">
+                    <button type="button" id="create-channel">Create</button>
+                </div>
+
+                <div class="channels" id="channels">
+                    <a>
+                        <span style="background: orange;"></span> #development
+                    </a>
+                    <a>
+                        <span style="background: cyan;"></span> #design
+                    </a>
+                    <a>
+                        <span style="background: tomato;"></span> #admin
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./js/app.js"></script>
