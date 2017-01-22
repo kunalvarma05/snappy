@@ -143,9 +143,11 @@ button {
     background: #fafafa;
 }
 
+
 /*
  * Channels
  */
+
 .chat-container {
     position: relative;
     height: 100%;
@@ -166,8 +168,7 @@ button {
     padding: 10px 15px;
 }
 
-.channel-area .channels a:hover,
-.channel-area .channels a.active {
+.channel-area .channels a:hover, .channel-area .channels a.active {
     background: #242a45;
 }
 
@@ -180,21 +181,38 @@ button {
     border-radius: 2px;
 }
 
+
+/*
+ * Sidebar Header
+ */
+
+.sidebar-header {
+    color: #fff;
+    padding: 6px 10px;
+    display: block;
+    background: #364263;
+}
+
+.sidebar-header span {
+    float: right;
+    font-weight: bold;
+}
+
+
 /*
  * Channel Form
  */
- .toggle-channel-form {
-     background: #2b3552;
-     color: #fff;
-     padding: 6px 10px;
-     display: block;
-     text-align: right;
- }
 
- .toggle-channel-form span {
-     float: left;
-     margin-top: 5px;
- }
+.toggle-channel-form {
+    background: #2b3552;
+    text-align: right;
+}
+
+.toggle-channel-form span {
+    float: left;
+    margin-top: 5px;
+    font-weight: normal;
+}
 
 .channel-area .channel-form {
     background: #141a2e;
@@ -236,4 +254,37 @@ button {
     background: #3945e2;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.4);
     transform: scale(1.02);
+}
+
+
+/*
+ * Member Area
+ */
+
+.member-area {
+    background: #242a45;
+    left: 15%;
+    max-width: 20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.member-area .members a {
+    display: block;
+    color: #606ea1;
+    text-align: right;
+    padding: 10px 15px;
+    border-bottom: solid 1px #1e2539;
+}
+
+.member-area .members a:hover {
+    background: #1e2539;
+}
+
+.member-area .members a img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    float: left;
 }
