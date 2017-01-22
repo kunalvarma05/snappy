@@ -1,0 +1,15 @@
+body {
+    height: 100%;
+    background: #242a45;
+    background-size: cover;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.auth-area .logo {
+    font-size: 30px;
+}
