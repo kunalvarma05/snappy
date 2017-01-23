@@ -7,6 +7,10 @@ html, body {
     box-sizing: inherit;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     background: #fff;
     color: #7c80b1;
@@ -218,7 +222,6 @@ button {
 .channel-area .channel-form {
     background: #141a2e;
     padding: 15px;
-    display: none;
 }
 
 .channel-area .channel-form input[type=text] {
