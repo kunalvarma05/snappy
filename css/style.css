@@ -1,3 +1,19 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-top: -1%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0%;
+    }
+}
+
+.animate {
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
 html, body {
     height: 100%;
     box-sizing: border-box;
@@ -49,6 +65,10 @@ button {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
 }
 
 .auth-area .logo {
