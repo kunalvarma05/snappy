@@ -77,13 +77,17 @@ button {
     margin-right: 10px;
 }
 
-.google-auth-button {
+.primary-button {
     background: #4d5aff;
     color: #fff;
 }
 
-.google-auth-button:hover {
+.primary-button:hover {
     background: #3945e2;
+}
+
+.primary-button span.icon {
+    border-right-color: rgba(255, 255, 255, 0.5);
 }
 
 
