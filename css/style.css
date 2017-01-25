@@ -162,7 +162,7 @@ button {
 .chat-header a {
     color: #d9deea;
     display: inline-block;
-    padding: 10px;
+    padding: 15px;
 }
 
 .chat-header .account-tab {
@@ -262,5 +262,51 @@ button {
 .empty-state h1 span {
     font-size: 60px;
     display: block;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+}
+
+.messages-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #f6f8ff;
+}
+
+.messages-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 10px;
+}
+
+.messages-header .user-info {
+    padding: 0 10px;
+    float: left;
+}
+
+.messages-header .chat-settings {
+    float: right;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+.messages-header .chat-settings .icon {
+    color: #7c80b1;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.messages-header .user-info img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    float: left;
+}
+
+.messages-header .user-info span {
+    margin-left: 10px;
+    margin-top: 5px;
+    display: inline-block;
 }
