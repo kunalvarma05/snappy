@@ -142,12 +142,15 @@ button {
  */
 
 .sidebar {
-    background: #1e2539;
+    position: fixed;
     left: 0;
-    max-width: 20%;
-    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    max-width: 30%;
     width: 100%;
     height: 100%;
+    background: #1e2539;
     box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -163,18 +166,8 @@ button {
     padding: 10px;
 }
 
-.chat-header .toggle-members {
-    float: left;
-    padding: 10px 15px;
-}
-
-.chat-header .logo {
-    font-size: 16px;
-}
-
 .chat-header .account-tab {
-    float: right;
-    position: relative;
+    float: left;
 }
 
 .chat-header .account-tab img {
@@ -183,38 +176,39 @@ button {
     border-radius: 50%;
 }
 
-.chat-header .toggle-account-dropdown span {
-    position: relative;
-    display: inline;
-    top: -5px;
-    margin-left: 5px;
-    color: #d9deea;
+.chat-header .logo {
+    font-size: 16px;
 }
 
-.chat-header .account-tab:hover .account-dropdown {
+.chat-header .settings-tab {
+    float: right;
+    position: relative;
+}
+
+.chat-header .settings-tab:hover .settings-dropdown {
     display: block;
 }
 
-.chat-header .account-dropdown {
+.chat-header .settings-dropdown {
     position: absolute;
-    top: 92%;
-    right: 20%;
+    top: 100%;
+    right: 30%;
     min-width: 150px;
     background: #fff;
     border: solid 1px #ddd;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 1;
+    border-radius: 2px;
 }
 
-.chat-header .account-dropdown a {
+.chat-header .settings-dropdown a {
     display: block;
     text-align: left;
     color: #555;
-    border-bottom: solid 1px #ddd;
 }
 
-.chat-header .account-dropdown a:hover {
+.chat-header .settings-dropdown a:hover {
     background: #fafafa;
 }
 
