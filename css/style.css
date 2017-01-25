@@ -127,12 +127,28 @@ button {
     animation-delay: 2s;
 }
 
+
 /*
  * Chat Area
  */
 
 .chat-area {
     height: inherit;
+}
+
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    background: #1e2539;
+    left: 0;
+    max-width: 20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .chat-header {
@@ -147,7 +163,7 @@ button {
     padding: 10px;
 }
 
-.chat-header .toggle-channels {
+.chat-header .toggle-members {
     float: left;
     padding: 10px 15px;
 }
@@ -171,7 +187,7 @@ button {
     position: relative;
     display: inline;
     top: -5px;
-    left: 5px;
+    margin-left: 5px;
     color: #d9deea;
 }
 
@@ -202,134 +218,7 @@ button {
     background: #fafafa;
 }
 
-
-/*
- * Channels
- */
-
-.chat-container {
-    position: relative;
-    height: 100%;
-}
-
-.channel-area {
-    background: #1e2539;
-    max-width: 15%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.channel-area .channels a {
-    display: block;
-    color: #606ea1;
-    text-align: right;
-    padding: 10px 15px;
-}
-
-.channel-area .channels a:hover, .channel-area .channels a.active {
-    background: #242a45;
-}
-
-.channel-area .channels a span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    float: left;
-    margin-top: 6px;
-    border-radius: 2px;
-}
-
-
-/*
- * Sidebar Header
- */
-
-.sidebar-header {
-    color: #fff;
-    padding: 6px 10px;
-    display: block;
-    background: #364263;
-}
-
-.sidebar-header span {
-    float: right;
-    font-weight: bold;
-}
-
-
-/*
- * Channel Form
- */
-
-.toggle-channel-form {
-    background: #2b3552;
-    text-align: right;
-}
-
-.toggle-channel-form span {
-    float: left;
-    margin-top: 5px;
-    font-weight: normal;
-}
-
-.channel-area .channel-form {
-    background: #141a2e;
-    padding: 15px;
-}
-
-.channel-area .channel-form input[type=text] {
-    width: 100%;
-    border: none;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    padding: 6px 12px;
-    font-size: 12px;
-}
-
-.channel-area .channel-form input[type=color] {
-    background: transparent;
-    border-radius: 2px;
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 30px;
-    height: 30px;
-}
-
-.channel-area .channel-form button {
-    float: right;
-    margin-top: 2px;
-    background: #4d5aff;
-    border: none;
-    border-radius: 2px;
-    padding: 5px 15px;
-    color: #fff;
-    transition: all 0.5s ease-in-out;
-    font-size: 12px;
-}
-
-.channel-area .channel-form button:hover {
-    background: #3945e2;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.4);
-    transform: scale(1.02);
-}
-
-
-/*
- * Member Area
- */
-
-.member-area {
-    background: #242a45;
-    left: 15%;
-    max-width: 20%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.member-area .members a {
+.member-list a {
     display: block;
     color: #606ea1;
     text-align: right;
@@ -337,11 +226,16 @@ button {
     border-bottom: solid 1px #1e2539;
 }
 
-.member-area .members a:hover {
-    background: #1e2539;
+.member-list a:hover {
+    background: #141a2e;
 }
 
-.member-area .members a img {
+.member-list a.active {
+    background: #4d5aff;
+    color: #fff;
+}
+
+.member-list a img {
     width: 24px;
     height: 24px;
     border-radius: 50%;

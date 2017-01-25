@@ -11,78 +11,42 @@
 
 <body>
     <div class="chat-area" id="chat-area">
-        <div class="chat-header">
-            <a class="toggle-channels">
-                <span class="fa fa-bars"></span>
-            </a>
-            <a href="/" class="logo">Snappy</a>
-            <div class="account-tab">
-                <a class="toggle-account-dropdown">
-                    <img src="https://en.gravatar.com/avatar/bbbde57caae3f85a50d2991bc1333cbd?size=48" alt="Kunal Varma" />
-                    <span class="fa fa-chevron-down"></span>
+        <div class="sidebar">
+            <div class="chat-header">
+                <a class="toggle-members">
+                    <span class="fa fa-bars"></span>
                 </a>
-                <div class="account-dropdown">
-                    <a class="username">Kunal Varma</a>
-                    <a class="logout">Log out</a>
+                <a href="/" class="logo">Snappy</a>
+                <div class="account-tab">
+                    <a class="toggle-account-dropdown">
+                        <img src="https://en.gravatar.com/avatar/bbbde57caae3f85a50d2991bc1333cbd?size=48" alt="Kunal Varma" />
+                        <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <div class="account-dropdown">
+                        <a class="username">Kunal Varma</a>
+                        <a class="logout">Log out</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="chat-container">
-            <div class="channel-area">
-                <a class="sidebar-header toggle-channel-form">
-                    <span class="fa fa-plus"></span>
-                    Create Channels
+            <div class="member-list" id="members">
+                <a>
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="member" /> John Doe
                 </a>
-                <div class="channel-form hidden">
-                    <input type="text" placeholder="Channel name" id="channel-name">
-                    <input type="text" placeholder="Password (optional)" id="channel-password">
-                    <input type="color" id="channel-color" value="#00ffff">
-                    <button type="button" id="create-channel">Create</button>
-                </div>
-
-                <div class="channels" id="channels">
-                    <a>
-                        <span style="background: orange;"></span> #development
-                    </a>
-                    <a class="active">
-                        <span style="background: cyan;"></span> #design
-                    </a>
-                    <a>
-                        <span style="background: tomato;"></span> #admin
-                    </a>
-                </div>
-            </div>
-            <div class="member-area">
-                <a class="sidebar-header members-info">
-                    <span class="member-count">6</span>
-                    Members
+                <a class="active">
+                    <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="member" /> Michael Halls
                 </a>
-                <div class="members" id="members">
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="member" />
-                        John Doe
-                    </a>
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="member" />
-                        Michael Halls
-                    </a>
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="member" />
-                        Louis Banks
-                    </a>
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/women/73.jpg" alt="member" />
-                        June Sanders
-                    </a>
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="member" />
-                        Susan Thomas
-                    </a>
-                    <a>
-                        <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="member" />
-                        Wade Wilson
-                    </a>
-                </div>
+                <a>
+                    <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="member" /> Louis Banks
+                </a>
+                <a>
+                    <img src="https://randomuser.me/api/portraits/women/73.jpg" alt="member" /> June Sanders
+                </a>
+                <a>
+                    <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="member" /> Susan Thomas
+                </a>
+                <a>
+                    <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="member" /> Wade Wilson
+                </a>
             </div>
         </div>
     </div>
