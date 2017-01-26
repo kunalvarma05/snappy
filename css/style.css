@@ -36,10 +36,10 @@ html, body {
 body {
     background: #fff;
     color: #7c80b1;
-    font-size: 14px;
-    letter-spacing: 0.05em;
+    font-size: 12px;
+    letter-spacing: 0.06em;
     line-height: 1.6em;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -76,13 +76,15 @@ button {
 
 .auth-area .logo {
     color: #fff;
-    font-weight: bold;
-    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 48px;
 }
 
 .tagline {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: lighter;
     margin-top: 20px;
 }
 
@@ -205,6 +207,7 @@ button {
     display: block;
     text-align: left;
     color: #555;
+    padding: 10px;
 }
 
 .chat-header .settings-dropdown a:hover {
@@ -278,6 +281,7 @@ button {
     left: 0;
     right: 0;
     background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
 
@@ -289,7 +293,7 @@ button {
 .messages-header .chat-settings {
     float: right;
     padding: 0 10px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .messages-header .chat-settings .icon {
@@ -307,6 +311,49 @@ button {
 
 .messages-header .user-info span {
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 6px;
     display: inline-block;
+}
+
+
+/*
+ * Messages
+ */
+
+.messages {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 20px;
+}
+
+.message {
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    color: #4f5273;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    float: left;
+    clear: both;
+    position: relative;
+}
+
+.message.by-user {
+    background: #4c556f;
+    color: #fff;
+    float: right;
+}
+
+.message-text {
+    padding-bottom: 5px;
+}
+
+.message .time {
+    font-size: 10px;
+    opacity: 0.6;
 }
