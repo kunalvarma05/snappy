@@ -325,7 +325,7 @@ button {
     top: 52px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 75px;
     overflow: auto;
     padding: 20px;
 }
@@ -356,4 +356,19 @@ button {
 .message .time {
     font-size: 10px;
     opacity: 0.6;
+}
+
+.message-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px;
+}
+
+.message-form input[type=text] {
+    width: 100%;
+    border: none;
+    padding: 15px;
 }
