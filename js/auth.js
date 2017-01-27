@@ -17,5 +17,5 @@ whenPageIsReady(function() {
             // Some error occured
             console.log(error);
         });
-    });
+    });    
 });

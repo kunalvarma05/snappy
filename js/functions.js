@@ -23,7 +23,9 @@ function getElement(selector) {
 // Executes a code when the element
 // is clicked.
 function click(element, fn) {
-    element.addEventListener("click", fn);
+    if (element) {
+        element.addEventListener("click", fn);
+    }
 }
 
 // Scrolls to the bottom of the
@@ -35,6 +37,16 @@ function scrollToBottom(element) {
 // Redirect
 function redirectTo(page) {
     window.location = page;
+}
+
+// Scroll to the Latest Message
+function scrollToLatestMessage() {
+    // Messages element
+    var messagesElement = getElement('#messages');
+    // If the element exists
+    if (messagesElement) {
+        scrollToBottom(messagesElement);
+    }
 }
 
 /**
@@ -56,6 +68,34 @@ function ifUserIsLoggedIn(fn) {
             redirectTo("/index.html");
         }
     });
+}
+
+// Render the chat page
+// - Hide Page loader
+// - Display Chat Area
+// - Update page with user data
+function renderChatPage() {
+    // Hide the page loader
+    var pageLoader = getElement('#page-loader');
+    pageLoader.classList.add('hidden');
+
+    // Display the chat area
+    var chatArea = getElement('#chat-area');
+    chatArea.classList.remove('hidden');
+
+    // Update page with the data of
+    // the currently logged in user.
+    updatePageWithUserData(window.currentUser);
+}
+
+// Update page with logged in user data
+function updatePageWithUserData(user) {
+    // Update user image
+    var accountImage = getElement('#account-image');
+    accountImage.setAttribute('src', user.photoURL);
+    // Update user name
+    var accountName = getElement('#account-name');
+    accountName.textContent = user.displayName;
 }
 
 // Logout user
