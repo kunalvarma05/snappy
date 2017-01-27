@@ -124,11 +124,6 @@ button {
     border-right-color: rgba(255, 255, 255, 0.5);
 }
 
-.auth-area .button {
-    opacity: 0;
-    animation-delay: 2s;
-}
-
 
 /*
  * Chat Area
@@ -373,4 +368,22 @@ button {
     border: none;
     padding: 15px;
     outline: none;
+}
+
+/*
+ * Page Loader
+ */
+.page-loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #f4f6ff;
+}
+
+.page-loader h1 {
+    font-size: 60px;
+    position: relative;
+    top: 40%;
+    margin: 0;
 }
