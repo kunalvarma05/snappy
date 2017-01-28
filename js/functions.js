@@ -109,3 +109,17 @@ function logoutUser() {
         console.log(error);
     });
 }
+
+function createUser(user) {
+    // Get a reference to the database service
+    var database = firebase.database();
+    var users = database.ref("users");
+
+    return users.child(user.uid).set({
+        uid: user.uid,
+        name: user.displayName,
+        email: user.email,
+        picture: user.photoURL
+    });
+
+}

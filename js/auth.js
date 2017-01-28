@@ -10,12 +10,18 @@ whenPageIsReady(function() {
     click(authButton, function() {
         // Sign in with Google using a Pop up
         firebase.auth().signInWithPopup(provider).then(function(result) {
-            // User logged in
-            // Redirect to chat page
-            redirectTo("/chat.html");
+            // User authenticated
+            var user = result.user;
+
+            // Create User
+            createUser(user).then(function() {
+                // Redirect to chat page
+                redirectTo("/chat.html");
+            });
+
         }).catch(function(error) {
             // Some error occured
             console.log(error);
         });
-    });    
+    });
 });
