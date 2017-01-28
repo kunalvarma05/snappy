@@ -104,7 +104,7 @@ function logoutUser() {
     firebase.auth().signOut().then(function() {
         // User signed out
         // redirect to home page.
-        redirectTo('/index.html');
+        redirectTo('index.html');
     }, function(error) {
         console.log(error);
     });

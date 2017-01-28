@@ -16,7 +16,7 @@ whenPageIsReady(function() {
             // Create User
             createUser(user).then(function() {
                 // Redirect to chat page
-                redirectTo("/chat.html");
+                redirectTo("chat.html");
             });
 
         }).catch(function(error) {
