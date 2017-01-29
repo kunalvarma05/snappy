@@ -15,6 +15,14 @@ function whenPageIsReady(fn) {
     }
 }
 
+function getChatId(uid1, uid2) {
+    if (uid1 < uid2) {
+        return uid1 + "" + uid2;
+    } else {
+        return uid2 + "" + uid1;
+    }
+}
+
 // Get element by selector
 function getElement(selector) {
     return document.querySelector(selector);
@@ -26,6 +34,16 @@ function click(element, fn) {
     if (element) {
         element.addEventListener("click", fn);
     }
+}
+
+// Executes the given function if
+// the element has class.
+function onClickMultiple(className, fn) {
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains(className)) {
+            fn(event.target);
+        }
+    });
 }
 
 // Scrolls to the bottom of the
@@ -65,7 +83,7 @@ function ifUserIsLoggedIn(fn) {
         } else {
             // No user logged in
             // redirect to home page.
-            redirectTo("/index.html");
+            redirectTo("index.html");
         }
     });
 }
@@ -121,5 +139,35 @@ function createUser(user) {
         email: user.email,
         picture: user.photoURL
     });
+
+}
+
+function loadMembers(fn) {
+    // Get a reference to the database service
+    var database = firebase.database();
+    var userRef = database.ref("users");
+
+    userRef.on('value', function (snapshot) {
+        var users = snapshot.val();
+        fn(users);
+    });
+
+}
+
+function makeMemberItem(member) {
+    var uid = member.uid;
+    var chat_id = getChatId(window.currentUser.uid, uid);
+    return "<a class='member' id='" + chat_id + "'>" + member.name + "</a>";
+}
+
+function getUser(uid) {
+    // Get a reference to the database service
+    var database = firebase.database();
+    var users = database.ref("users");
+
+    return users.child(user.uid);
+}
+
+function loadMessages(chatId) {
 
 }
